@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/heing/Games101/Games101/Assignment1/代码框架/Triangle.hpp
+eigen3/Eigen/Eigen
+-
+
+/home/heing/Games101/Games101/Assignment1/代码框架/main.cpp
+Triangle.hpp
+/home/heing/Games101/Games101/Assignment1/代码框架/Triangle.hpp
+rasterizer.hpp
+/home/heing/Games101/Games101/Assignment1/代码框架/rasterizer.hpp
+eigen3/Eigen/Eigen
+-
+iostream
+-
+opencv2/opencv.hpp
+-
+
+/home/heing/Games101/Games101/Assignment1/代码框架/rasterizer.hpp
+Triangle.hpp
+/home/heing/Games101/Games101/Assignment1/代码框架/Triangle.hpp
+algorithm
+-
+eigen3/Eigen/Eigen
+-
+

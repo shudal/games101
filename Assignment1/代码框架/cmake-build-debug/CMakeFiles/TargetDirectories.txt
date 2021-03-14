@@ -1,0 +1,3 @@
+/home/heing/Games101/Games101/Assignment1/代码框架/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/heing/Games101/Games101/Assignment1/代码框架/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/heing/Games101/Games101/Assignment1/代码框架/cmake-build-debug/CMakeFiles/Rasterizer.dir
