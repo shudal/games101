@@ -33,12 +33,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Rasterizer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rasterizer" TARGET_NAME="Rasterizer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Rasterizer" RUN_TARGET_NAME="Rasterizer">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Rasterizer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rasterizer" TARGET_NAME="Rasterizer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Rasterizer" RUN_TARGET_NAME="Rasterizer">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -58,7 +58,8 @@
       <option name="presentableId" value="Default" />
       <updated>1615708228272</updated>
       <workItem from="1615708229525" duration="198000" />
-      <workItem from="1615708447389" duration="6159000" />
+      <workItem from="1615708447389" duration="8676000" />
+      <workItem from="1615779997311" duration="6047000" />
     </task>
     <servers />
   </component>
@@ -67,21 +68,37 @@
       <screen x="67" y="27" width="1213" height="693" />
     </state>
     <state x="131" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615708424898" />
-    <state width="1159" height="155" key="GridCell.Tab.0.bottom" timestamp="1615715624858">
+    <state width="1159" height="28" key="GridCell.Tab.0.bottom" timestamp="1615793991690">
       <screen x="67" y="27" width="1213" height="693" />
     </state>
-    <state width="1159" height="155" key="GridCell.Tab.0.bottom/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615715624858" />
-    <state width="1159" height="155" key="GridCell.Tab.0.center" timestamp="1615715624858">
+    <state width="1159" height="28" key="GridCell.Tab.0.bottom/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615793991690" />
+    <state width="1159" height="28" key="GridCell.Tab.0.center" timestamp="1615793991689">
       <screen x="67" y="27" width="1213" height="693" />
     </state>
-    <state width="1159" height="155" key="GridCell.Tab.0.center/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615715624858" />
-    <state width="1159" height="155" key="GridCell.Tab.0.left" timestamp="1615715624857">
+    <state width="1159" height="28" key="GridCell.Tab.0.center/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615793991689" />
+    <state width="1159" height="28" key="GridCell.Tab.0.left" timestamp="1615793991689">
       <screen x="67" y="27" width="1213" height="693" />
     </state>
-    <state width="1159" height="155" key="GridCell.Tab.0.left/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615715624857" />
-    <state width="1159" height="155" key="GridCell.Tab.0.right" timestamp="1615715624858">
+    <state width="1159" height="28" key="GridCell.Tab.0.left/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615793991689" />
+    <state width="1159" height="28" key="GridCell.Tab.0.right" timestamp="1615793991689">
       <screen x="67" y="27" width="1213" height="693" />
     </state>
-    <state width="1159" height="155" key="GridCell.Tab.0.right/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615715624858" />
+    <state width="1159" height="28" key="GridCell.Tab.0.right/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615793991689" />
+    <state width="1159" height="195" key="GridCell.Tab.1.bottom" timestamp="1615791116787">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="195" key="GridCell.Tab.1.bottom/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615791116787" />
+    <state width="1159" height="195" key="GridCell.Tab.1.center" timestamp="1615791116787">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="195" key="GridCell.Tab.1.center/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615791116787" />
+    <state width="1159" height="195" key="GridCell.Tab.1.left" timestamp="1615791116787">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="195" key="GridCell.Tab.1.left/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615791116787" />
+    <state width="1159" height="195" key="GridCell.Tab.1.right" timestamp="1615791116787">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="195" key="GridCell.Tab.1.right/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1615791116787" />
   </component>
 </project>

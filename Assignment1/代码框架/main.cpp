@@ -6,6 +6,26 @@
 
 constexpr double MY_PI = 3.1415926;
 
+Eigen::Matrix4f get_rotation(Eigen::Vector3f axis, float angle) {
+    axis.normalize();
+
+    Eigen::Matrix4f rot = Eigen::Matrix4f::Identity();
+    angle = MY_PI * (angle / 180);
+
+    Eigen::Matrix3f tmpone = std::cos(angle) * Eigen::Matrix3f::Identity()
+            + (1-cos(angle)) * axis * axis.transpose();
+
+    Eigen::Matrix3f tmpthree;
+    tmpthree<< 0,-1 * axis.z(), axis.y(),
+                axis.z(),0,-1*axis.x(),
+                -1*axis.y(),axis.x(),0;
+    tmpthree = std::sin(angle) * tmpthree;
+
+    tmpone += tmpthree;
+
+    rot.block<3,3>(0,0) = tmpone;
+    return rot;
+}
 Eigen::Matrix4f get_view_matrix(Eigen::Vector3f eye_pos)
 {
     Eigen::Matrix4f view = Eigen::Matrix4f::Identity();
@@ -27,6 +47,8 @@ Eigen::Matrix4f get_model_matrix(float rotation_angle)
     // Create the model matrix for rotating the triangle around the Z axis.
     // Then return it.
 
+    Eigen::Vector3f axis(0,0,1);
+    return get_rotation(axis,rotation_angle);
     rotation_angle = MY_PI * (rotation_angle/180);
 
     model << std::cos(rotation_angle), -1.0 * std::sin(rotation_angle), 0, 0,
