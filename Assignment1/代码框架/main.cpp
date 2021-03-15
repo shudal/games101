@@ -71,13 +71,13 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
     b = -1.0 * t;
     r = t * aspect_ratio;
     l = -1.0 * t;
-    n = zNear;
-    f = zFar;
+    n = -zNear;
+    f = -zFar;
 
     Eigen::Matrix4f persp,p2o,ortho, tmp;
     p2o <<  n,0,0,0,
             0,n,0,0,
-            0,0,n+f, -1.0*n*f,
+            0,0,n+f, -n*f,
             0,0,1,0;
     tmp << 1,0,0,-1.0*(r+l)/2,
            0,1,0,-1.0*(t+b)/2,
