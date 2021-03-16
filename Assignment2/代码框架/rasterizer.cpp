@@ -195,7 +195,7 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t) {
                 }
                 if (InsideCount > 0) {
                     float intensity = (float)InsideCount / 4.0;
-                    set_pixel(Eigen::Vector3f(i,k,1.0),t.getColor() * intensity);
+                    mix_pixel(Eigen::Vector3f(i,k,1.0),t.getColor() * intensity);
                 }
             }
         }
