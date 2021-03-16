@@ -93,11 +93,15 @@ namespace rst
         std::vector<Eigen::Vector3f> frame_buf;
 
         std::vector<float> depth_buf;
+        std::vector<float> msaa_depth_buf;
         int get_index(int x, int y);
 
         int width, height;
 
         int next_id = 0;
         int get_next_id() { return next_id++; }
+
+        // msaa
+        void mix_pixel(const Vector3f &point, const Vector3f &color);
     };
 }
