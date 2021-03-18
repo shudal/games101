@@ -30,15 +30,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Assignment3/Code" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Rasterizer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rasterizer" TARGET_NAME="Rasterizer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Rasterizer" RUN_TARGET_NAME="Rasterizer">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Rasterizer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Rasterizer" TARGET_NAME="Rasterizer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Rasterizer" RUN_TARGET_NAME="Rasterizer">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -61,10 +61,15 @@
       <workItem from="1615876222524" duration="3536000" />
       <workItem from="1615880361121" duration="8206000" />
       <workItem from="1615893937980" duration="629000" />
+      <workItem from="1616073651180" duration="41000" />
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="456" y="130" width="424" height="484" key="FileChooserDialogImpl" timestamp="1616073691232">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state x="456" y="130" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1616073691232" />
     <state width="1159" height="70" key="GridCell.Tab.0.bottom" timestamp="1615894935231">
       <screen x="67" y="27" width="1213" height="693" />
     </state>
