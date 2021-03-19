@@ -299,6 +299,21 @@ Eigen::Vector3f bump_fragment_shader(const fragment_shader_payload& payload)
     // dV = kh * kn * (h(u,v+1/h)-h(u,v))
     // Vector ln = (-dU, -dV, 1)
     // Normal n = normalize(TBN * ln)
+    Eigen::Vector3f n = normal;
+    float x = n.x(), y = n.y(), z = n.z();
+    Eigen::Vector3f t(x*y/sqrt(x*x+z*z),sqrt(x*x+z*z),z*y/sqrt(x*x+z*z));
+    Eigen::Vector3f b = n.cross(t);
+    Eigen::Matrix3f TBN;
+    TBN << t,b,n;
+
+    float u = payload.tex_coords.x(), v = payload.tex_coords.y();
+    float w = payload.texture->width, h = payload.texture->height;
+    float subu = std::min(1.0,u+1.0/w);
+    float subv = std::min(1.0,v+1.0/h);
+    float dU = kh * kn * (payload.texture->getColor(subu, v).norm() - payload.texture->getColor(u,v).norm());
+    float dV = kh * kn * (payload.texture->getColor(u,subv).norm() - payload.texture->getColor(u,v).norm());
+    Eigen::Vector3f ln (- dU, - dV, 1);
+    normal = (TBN * ln).normalized();
 
 
     Eigen::Vector3f result_color = {0, 0, 0};
@@ -341,6 +356,7 @@ int main(int argc, const char** argv)
     r.set_texture(Texture(obj_path + texture_path));
 
     std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = phong_fragment_shader;
+    active_shader = bump_fragment_shader;
 
     if (argc >= 2)
     {
