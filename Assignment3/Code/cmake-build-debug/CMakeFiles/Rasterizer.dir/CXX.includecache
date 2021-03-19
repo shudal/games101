@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/heing/Games101/Games101/Assignment3/Code/OBJ_Loader.h
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+math.h
+-
+
 /home/heing/Games101/Games101/Assignment3/Code/Shader.hpp
 eigen3/Eigen/Eigen
 -
@@ -28,15 +40,23 @@ Texture.hpp
 
 /home/heing/Games101/Games101/Assignment3/Code/global.hpp
 
-/home/heing/Games101/Games101/Assignment3/Code/rasterizer.cpp
-algorithm
+/home/heing/Games101/Games101/Assignment3/Code/main.cpp
+iostream
 -
-rasterizer.hpp
-/home/heing/Games101/Games101/Assignment3/Code/rasterizer.hpp
 opencv2/opencv.hpp
 -
-math.h
--
+global.hpp
+/home/heing/Games101/Games101/Assignment3/Code/global.hpp
+rasterizer.hpp
+/home/heing/Games101/Games101/Assignment3/Code/rasterizer.hpp
+Triangle.hpp
+/home/heing/Games101/Games101/Assignment3/Code/Triangle.hpp
+Shader.hpp
+/home/heing/Games101/Games101/Assignment3/Code/Shader.hpp
+Texture.hpp
+/home/heing/Games101/Games101/Assignment3/Code/Texture.hpp
+OBJ_Loader.h
+/home/heing/Games101/Games101/Assignment3/Code/OBJ_Loader.h
 
 /home/heing/Games101/Games101/Assignment3/Code/rasterizer.hpp
 eigen3/Eigen/Eigen
