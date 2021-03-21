@@ -388,7 +388,10 @@ int main(int argc, const char** argv)
     r.set_texture(Texture(obj_path + texture_path));
 
     std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = phong_fragment_shader;
-    //active_shader = texture_fragment_shader;
+
+    active_shader = texture_fragment_shader;
+    texture_path = "spot_texture.png";
+    r.set_texture(Texture(obj_path + texture_path));
 
     if (argc >= 2)
     {
@@ -452,6 +455,10 @@ int main(int argc, const char** argv)
     while(key != 27)
     {
         r.clear(rst::Buffers::Color | rst::Buffers::Depth);
+
+        // by junhao
+        //static float dz = 0.5;
+        //eye_pos.z() -= dz;
 
         r.set_model(get_model_matrix(angle));
         r.set_view(get_view_matrix(eye_pos));
