@@ -233,6 +233,8 @@ void Renderer::Render(const Scene& scene)
             x = (float) i / scene.width - 0.5;
             x = 2 * x * scale * imageAspectRatio;
             y = (float) (scene.height-1 - j) / scene.height - 0.5;
+            //y = (float) (j) / scene.height - 0.5;
+
             y = 2 * y * scale;
 
             Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
