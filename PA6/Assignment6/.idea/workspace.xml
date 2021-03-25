@@ -57,8 +57,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616657098532</updated>
-      <workItem from="1616657099794" duration="7319000" />
+      <workItem from="1616657099794" duration="8043000" />
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1159" height="154" key="GridCell.Tab.0.bottom" timestamp="1616666584784">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="154" key="GridCell.Tab.0.bottom/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1616666584784" />
+    <state width="1159" height="154" key="GridCell.Tab.0.center" timestamp="1616666584784">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="154" key="GridCell.Tab.0.center/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1616666584784" />
+    <state width="1159" height="154" key="GridCell.Tab.0.left" timestamp="1616666584783">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="154" key="GridCell.Tab.0.left/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1616666584783" />
+    <state width="1159" height="154" key="GridCell.Tab.0.right" timestamp="1616666584784">
+      <screen x="67" y="27" width="1213" height="693" />
+    </state>
+    <state width="1159" height="154" key="GridCell.Tab.0.right/67.27.1213.693/67.27.1213.693@67.27.1213.693" timestamp="1616666584784" />
   </component>
 </project>
