@@ -208,6 +208,13 @@ inline bool Triangle::intersect(const Ray& ray, float& tnear,
 
 inline Bounds3 Triangle::getBounds() { return Union(Bounds3(v0, v1), v2); }
 
+bool mjhvalid(float x) {
+    if (x > 0 && x < 1){
+        return true;
+    } else {
+        return false;
+    }
+}
 inline Intersection Triangle::getIntersection(Ray ray)
 {
     Intersection inter;
@@ -232,10 +239,12 @@ inline Intersection Triangle::getIntersection(Ray ray)
     t_tmp = dotProduct(e2, qvec) * det_inv;
 
     // TODO find ray triangle intersection
-
-
-
-
+    inter.happened = true;
+    inter.normal = normal;
+    inter.coords  = Vector3f(u,v,0);
+    inter.m = m;
+    inter.distance = dotProduct(t_tmp * ray.direction, t_tmp * ray.direction);
+    inter.obj = this;
     return inter;
 }
 
