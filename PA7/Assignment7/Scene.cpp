@@ -61,4 +61,8 @@ bool Scene::trace(
 Vector3f Scene::castRay(const Ray &ray, int depth) const
 {
     // TO DO Implement Path Tracing Algorithm here
+    Intersection pinter = intersect(ray);
+
+    if (pinter.happened) return shade(pinter,-1 * ray.direction);
+    return Vector3f(0);
 }

@@ -109,4 +109,38 @@ public:
         // As a consequence of the conservation of energy, transmittance is given by:
         // kt = 1 - kr;
     }
+
+    Vector3f shade(Intersection pint, Vector3f wo) const {
+        Vector3f ans;
+
+        Vector3f p = pint.coords, N = pint.normal;
+
+        Intersection inter;
+        float pdf_light;
+        sampleLight(inter,pdf_light);
+        Vector3f x = inter.coords;
+        Vector3f ws = x-p, NN = inter.normal;
+        auto emit = inter.emit;
+
+        Vector3f L_dir = 0;
+        Intersection tmpint = intersect(Ray(p,x-p));
+        bool b1 = (tmpint.coords - inter.coords).norm() < 0.01;
+        if (b1) {
+            L_dir = emit * pint.m->eval(ws,wo, N) * dotProduct(ws,N) * dotProduct(ws,NN) / std::pow(std::abs((x-p).norm()),2) / pdf_light;
+        }
+
+        Vector3f L_indir = 0;
+        if (get_random_float() < RussianRoulette) {
+            Vector3f wi = pint.m->sample(wo,N);
+            auto tmpi = intersect(Ray(p,wi));
+
+            if (tmpi.happened && tmpi.obj->hasEmit() == false) {
+                auto pdf_hemi = pint.m->pdf(wo,wi,N);
+                L_indir = shade(tmpi,wi) * pint.m->eval(wo,wi,N) * dotProduct(wi,N) / pdf_hemi / RussianRoulette;
+            }
+        }
+
+        ans = L_dir + L_indir;
+        return ans;
+    }
 };
