@@ -260,6 +260,7 @@ inline Intersection Triangle::getIntersection(Ray ray)
     inter.m = m;
     inter.distance = dotProduct(t_tmp * ray.direction, t_tmp * ray.direction);
     inter.obj = this;
+    inter.emit = m->getEmission();
     return inter;
 }
 

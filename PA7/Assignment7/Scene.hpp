@@ -113,20 +113,24 @@ public:
     Vector3f shade(Intersection pint, Vector3f wo) const {
         Vector3f ans;
 
+        if (pint.emit.norm() > 0) {
+            return Vector3f(1);
+        }
+
         Vector3f p = pint.coords, N = pint.normal;
 
         Intersection inter;
         float pdf_light;
         sampleLight(inter,pdf_light);
         Vector3f x = inter.coords;
-        Vector3f ws = x-p, NN = inter.normal;
+        Vector3f ws = normalize(x-p), NN = inter.normal;
         auto emit = inter.emit;
 
         Vector3f L_dir = 0;
         Intersection tmpint = intersect(Ray(p,x-p));
         bool b1 = (tmpint.coords - inter.coords).norm() < 0.01;
         if (b1) {
-            L_dir = emit * pint.m->eval(ws,wo, N) * dotProduct(ws,N) * dotProduct(ws,NN) / std::pow(std::abs((x-p).norm()),2) / pdf_light;
+            L_dir = emit * pint.m->eval(ws,wo, N) * dotProduct(ws,N) * dotProduct(-ws,NN) / std::pow(std::abs((x-p).norm()),2) / pdf_light;
         }
 
         Vector3f L_indir = 0;
@@ -136,11 +140,12 @@ public:
 
             if (tmpi.happened && tmpi.obj->hasEmit() == false) {
                 auto pdf_hemi = pint.m->pdf(wo,wi,N);
-                L_indir = shade(tmpi,wi) * pint.m->eval(wo,wi,N) * dotProduct(wi,N) / pdf_hemi / RussianRoulette;
+                L_indir = shade(tmpi,-wi) * pint.m->eval(wo,wi,N) * dotProduct(wi,N) / pdf_hemi / RussianRoulette;
             }
         }
 
         ans = L_dir + L_indir;
+        //std::cout<<ans<<std::endl;
         return ans;
     }
 };
