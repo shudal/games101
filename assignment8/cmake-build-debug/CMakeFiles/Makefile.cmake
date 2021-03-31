@@ -7,10 +7,21 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "../CGL/CMakeLists.txt"
+  "../CGL/deps/glew/CMakeLists.txt"
+  "../CGL/deps/glfw/CMakeLists.txt"
+  "../CGL/deps/glfw/cmake_uninstall.cmake.in"
+  "../CGL/deps/glfw/src/CMakeLists.txt"
+  "../CGL/deps/glfw/src/glfw3.pc.in"
+  "../CGL/deps/glfw/src/glfw3Config.cmake.in"
+  "../CGL/deps/glfw/src/glfw_config.h.in"
+  "../CGL/src/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
+  "../src/CMakeLists.txt"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -20,12 +31,27 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeGenericSystem.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeInitializeConfigs.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeLanguageInformation.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakePackageConfigHelpers.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.c.in"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-C.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU-CXX.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Compiler/GNU.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindFontconfig.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindFreetype.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindOpenGL.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindPackageMessage.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindPkgConfig.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindThreads.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/FindX11.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-C.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -33,6 +59,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Platform/Linux.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/SelectLibraryConfigurations.cmake"
+  "/root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/WriteBasicConfigVersionFile.cmake"
   )
 
 # The corresponding makefile is:
@@ -44,9 +72,19 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CGL/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CGL/deps/glew/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CGL/deps/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CGL/deps/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CGL/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/RayTracing.dir/DependInfo.cmake"
+  "CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake"
+  "CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
+  "CGL/deps/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "CGL/src/CMakeFiles/CGL.dir/DependInfo.cmake"
+  "src/CMakeFiles/ropesim.dir/DependInfo.cmake"
   )

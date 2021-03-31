@@ -1,0 +1,86 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5595c/fast && /usr/bin/make  -f CMakeFiles/cmTC_5595c.dir/build.make CMakeFiles/cmTC_5595c.dir/build
+make[1]: 进入目录“/home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_5595c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5595c.dir/src.c.o   -c /home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5595c
+/root/download/clion-2020.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5595c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_5595c.dir/src.c.o  -o cmTC_5595c 
+CMakeFiles/cmTC_5595c.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3e)：对‘pthread_create’未定义的引用
+src.c:(.text+0x4a)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x56)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x67)：对‘pthread_join’未定义的引用
+src.c:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5595c.dir/build.make:106: recipe for target 'cmTC_5595c' failed
+make[1]: *** [cmTC_5595c] Error 1
+make[1]: 离开目录“/home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp”
+Makefile:141: recipe for target 'cmTC_5595c/fast' failed
+make: *** [cmTC_5595c/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_59f7b/fast && /usr/bin/make  -f CMakeFiles/cmTC_59f7b.dir/build.make CMakeFiles/cmTC_59f7b.dir/build
+make[1]: 进入目录“/home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_59f7b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_59f7b.dir/CheckFunctionExists.c.o   -c /root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_59f7b
+/root/download/clion-2020.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59f7b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_59f7b.dir/CheckFunctionExists.c.o  -o cmTC_59f7b  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_59f7b.dir/build.make:106: recipe for target 'cmTC_59f7b' failed
+make[1]: *** [cmTC_59f7b] Error 1
+make[1]: 离开目录“/home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp”
+Makefile:141: recipe for target 'cmTC_59f7b/fast' failed
+make: *** [cmTC_59f7b/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_07fb3/fast && /usr/bin/make  -f CMakeFiles/cmTC_07fb3.dir/build.make CMakeFiles/cmTC_07fb3.dir/build
+make[1]: 进入目录“/home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_07fb3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_07fb3.dir/CheckFunctionExists.c.o   -c /root/download/clion-2020.2.1/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_07fb3
+/root/download/clion-2020.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07fb3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_07fb3.dir/CheckFunctionExists.c.o  -o cmTC_07fb3  /usr/lib/x86_64-linux-gnu/libGL.so 
+CMakeFiles/cmTC_07fb3.dir/CheckFunctionExists.c.o：在函数‘main’中：
+CheckFunctionExists.c:(.text+0x10)：对‘glXGetProcAddressEXT’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_07fb3.dir/build.make:107: recipe for target 'cmTC_07fb3' failed
+make[1]: *** [cmTC_07fb3] Error 1
+make[1]: 离开目录“/home/heing/Games101/Games101/assignment8/cmake-build-debug/CMakeFiles/CMakeTmp”
+Makefile:141: recipe for target 'cmTC_07fb3/fast' failed
+make: *** [cmTC_07fb3/fast] Error 2
+
+
+
